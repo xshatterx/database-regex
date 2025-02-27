@@ -90,14 +90,10 @@ jobs:
 
       - name: Push changes
         run: |
-          # Check if there are changes to push
-          if git log HEAD; then
-            git checkout main
-            git merge --no-ff ${TEMP_BRANCH} -m "Merge sync changes from Dictionarry-Hub/database"
-            git push origin main
-          else
-            echo "No changes to push"
-          fi
+          # Always push changes
+          git checkout main
+          git merge --no-ff ${TEMP_BRANCH} -m "Merge sync changes from Dictionarry-Hub/database"
+          git push origin main
 
           # Clean up
           git branch -D ${TEMP_BRANCH} || echo "No temp branch to delete"
