@@ -28,34 +28,32 @@ jobs:
 
       - name: Extract regex_patterns with history
         run: |
-          # Clone the main repository
-          git clone https://github.com/Dictionarry-Hub/database.git main-repo
-
-          # Check if regex_patterns directory exists in the main repo
-          if [ ! -d "main-repo/regex_patterns" ]; then
-            echo "regex_patterns directory not found in main repository"
-            exit 1
-          fi
+          # Clone the main repository with the stable branch
+          git clone -b stable https://github.com/Dictionarry-Hub/database.git main-repo
 
           # Create a temporary directory for the filtered repository
           mkdir -p filtered-repo
           cd filtered-repo
           git init
 
-          # Copy the main repo content to be filtered
-          cd ..
-          cp -r main-repo/.git filtered-repo/
+          # Add the main repo as a remote
+          git remote add origin ../main-repo
 
-          # Go to filtered repo and extract only the regex_patterns folder
-          cd filtered-repo
-          git checkout main || git checkout master
+          # Fetch the stable branch specifically
+          git fetch origin stable
+
+          # Create a local stable branch tracking the remote stable branch
+          git checkout -b stable origin/stable
+
+          # Use git-filter-repo to keep only the regex_patterns directory
           git-filter-repo --path regex_patterns --force
 
           # Now filtered-repo has only the regex_patterns folder with full history
           cd ..
 
-      - name: Create temp branch
+      - name: Create temp branch for changes
         run: |
+          # Create a temporary branch for our changes
           TEMP_BRANCH="sync-$(date +%s)"
           git checkout -b ${TEMP_BRANCH}
 
@@ -64,19 +62,12 @@ jobs:
           # Remove existing regex_patterns if it exists
           rm -rf regex_patterns
 
-          # Check if regex_patterns exists in filtered repo
-          if [ -d "filtered-repo/regex_patterns" ]; then
-            # Extract regex_patterns from filtered repo
-            cp -r filtered-repo/regex_patterns ./
-          else
-            # Copy directly from main repo as fallback
-            cp -r main-repo/regex_patterns ./
-            echo "Using direct copy from main repo for regex_patterns"
-          fi
+          # Copy regex_patterns from filtered repo
+          cp -r filtered-repo/regex_patterns ./
 
           # Add regex_patterns changes
           git add regex_patterns
-          git commit -m "Update regex_patterns from main repo" || echo "No changes to regex_patterns"
+          git commit -m "Update regex_patterns from main repo (stable branch)" || echo "No changes to regex_patterns"
 
       - name: Update profiles and custom_formats folders
         run: |
@@ -89,9 +80,9 @@ jobs:
 
           # Remove all other files from these directories
           find profiles -type f ! -name ".gitkeep" -delete
-          find profiles -type d -empty -delete  # Remove empty subdirectories
+          find profiles -type d -mindepth 1 -delete  # Remove all subdirectories
           find custom_formats -type f ! -name ".gitkeep" -delete
-          find custom_formats -type d -empty -delete  # Remove empty subdirectories
+          find custom_formats -type d -mindepth 1 -delete  # Remove all subdirectories
 
           # Add these changes
           git add profiles custom_formats
@@ -100,10 +91,10 @@ jobs:
       - name: Push changes
         run: |
           # Check if there are changes to push
-          if git log origin/main..HEAD | grep -q .; then
-            git checkout main
+          if git log origin/stable..HEAD | grep -q .; then
+            git checkout stable
             git merge --no-ff ${TEMP_BRANCH} -m "Merge sync changes from Dictionarry-Hub/database"
-            git push origin main
+            git push origin stable
           else
             echo "No changes to push"
           fi
