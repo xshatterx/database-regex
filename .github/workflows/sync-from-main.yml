@@ -90,9 +90,19 @@ jobs:
 
       - name: Push changes
         run: |
-          # Always push changes
+          # Check what branches exist and their commits
+          git branch -v
+
+          # Print current branch state
+          echo "Temp branch commits:"
+          git log --oneline ${TEMP_BRANCH} -n 5
+
+          echo "Main branch commits:"
+          git log --oneline main -n 5
+
+          # Try to merge with --allow-unrelated-histories flag
           git checkout main
-          git merge --no-ff ${TEMP_BRANCH} -m "Merge sync changes from Dictionarry-Hub/database"
+          git merge --allow-unrelated-histories ${TEMP_BRANCH} -m "Merge sync changes from Dictionarry-Hub/database"
           git push origin main
 
           # Clean up
