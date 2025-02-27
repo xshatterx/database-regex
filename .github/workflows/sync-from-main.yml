@@ -91,10 +91,10 @@ jobs:
       - name: Push changes
         run: |
           # Check if there are changes to push
-          if git log origin/stable..HEAD | grep -q .; then
-            git checkout stable
+          if git log HEAD; then
+            git checkout main
             git merge --no-ff ${TEMP_BRANCH} -m "Merge sync changes from Dictionarry-Hub/database"
-            git push origin stable
+            git push origin main
           else
             echo "No changes to push"
           fi
