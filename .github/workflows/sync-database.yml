@@ -1,0 +1,56 @@
+name: Sync Database Repository
+
+on:
+  schedule:
+    # Runs at 00:00 and 12:00 UTC every day
+    - cron: "0 0,12 * * *"
+  # Allows manual triggering of the workflow
+  workflow_dispatch:
+
+jobs:
+  sync-database:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current repository
+        uses: actions/checkout@v3
+        with:
+          path: current-repo
+
+      - name: Clone source repository
+        uses: actions/checkout@v3
+        with:
+          repository: Dictionarry-Hub/database
+          path: source-repo
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+
+      - name: Sync regex_patterns folder and create additional folders
+        run: |
+          # Create directories if they don't exist
+          mkdir -p current-repo/regex_patterns
+          mkdir -p current-repo/custom_formats
+          mkdir -p current-repo/profiles
+
+          # Add .gitkeep files to empty directories
+          touch current-repo/custom_formats/.gitkeep
+          touch current-repo/profiles/.gitkeep
+
+          # Copy regex_patterns from source to current repo
+          cp -r source-repo/regex_patterns/* current-repo/regex_patterns/
+
+          # Navigate to the current repo
+          cd current-repo
+
+          # Add all changes
+          git add regex_patterns custom_formats profiles
+
+          # Commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Sync regex_patterns and add custom directories"
+            git push
+          fi
