@@ -21,6 +21,7 @@ jobs:
         with:
           repository: Dictionarry-Hub/database
           path: source-repo
+          fetch-depth: 0 # Fetch all history for all branches and tags
 
       - name: Set up Git
         run: |
@@ -38,19 +39,44 @@ jobs:
           touch current-repo/custom_formats/.gitkeep
           touch current-repo/profiles/.gitkeep
 
+          # Get the last processed commit hash if available
+          LAST_COMMIT_FILE="current-repo/.last_processed_commit"
+          if [ -f "$LAST_COMMIT_FILE" ]; then
+            LAST_COMMIT=$(cat "$LAST_COMMIT_FILE")
+          else
+            # If no previous commit was processed, get the earliest commit
+            LAST_COMMIT=$(cd source-repo && git rev-list --max-parents=0 HEAD)
+          fi
+
+          # Get the current commit hash
+          CURRENT_COMMIT=$(cd source-repo && git rev-parse HEAD)
+
+          # Get all commits since the last processed commit that affected regex_patterns
+          COMMIT_LOG=$(cd source-repo && git log --pretty=format:"- %s (%an)" $LAST_COMMIT..$CURRENT_COMMIT -- regex_patterns)
+
+          # If there are no commits affecting regex_patterns, use a default message
+          if [ -z "$COMMIT_LOG" ]; then
+            COMMIT_MSG="Sync regex_patterns and maintain custom directories"
+          else
+            COMMIT_MSG="Sync regex_patterns with changes:\n\n$COMMIT_LOG"
+          fi
+
           # Copy regex_patterns from source to current repo
           cp -r source-repo/regex_patterns/* current-repo/regex_patterns/
+
+          # Save the current commit hash for next run
+          echo "$CURRENT_COMMIT" > current-repo/.last_processed_commit
 
           # Navigate to the current repo
           cd current-repo
 
           # Add all changes
-          git add regex_patterns custom_formats profiles
+          git add regex_patterns custom_formats profiles .last_processed_commit
 
           # Commit if there are changes
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Sync regex_patterns and add custom directories"
+            git commit -m "$COMMIT_MSG"
             git push
           fi
