@@ -132,12 +132,12 @@ qualities:
   name: Transparent Capable
   description: ''
   qualities:
-  - id: 10
-    name: Bluray-1080p
   - id: 4
     name: Bluray-2160p
   - id: 5
     name: WEBDL-2160p
+  - id: 10
+    name: Bluray-1080p
   - id: 9
     name: WEBDL-1080p
   - id: 13
