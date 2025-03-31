@@ -1,18 +1,20 @@
 name: 720p Quality Tier 1
 description: Matches release groups who fall under 720p Quality Tier 1
 tags:
-- Release Group
+- Release Group Tier
+- 720p
+- Quality
 conditions:
-- name: Not WEB-DL
-  negate: true
-  required: true
-  source: web_dl
-  type: source
 - name: 720p
   negate: false
   required: true
   resolution: 720p
   type: resolution
+- name: BLURAY
+  negate: false
+  required: true
+  source: bluray
+  type: source
 - name: EbP
   negate: false
   pattern: EbP
