@@ -1,0 +1,10 @@
+name: Remux
+description: ''
+tags: []
+conditions:
+- name: Remux
+  type: quality_modifier
+  required: true
+  negate: false
+  qualityModifier: remux
+tests: []

@@ -1,0 +1,11 @@
+name: Dolby Vision
+description: ''
+tags:
+- HDR
+conditions:
+- name: Dolby Vision
+  type: release_title
+  required: true
+  negate: false
+  pattern: Dolby Vision
+tests: []

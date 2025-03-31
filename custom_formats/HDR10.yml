@@ -1,0 +1,11 @@
+name: HDR10
+description: ''
+tags:
+- HDR
+conditions:
+- name: HDR10
+  negate: false
+  pattern: HDR10
+  required: true
+  type: release_title
+tests: []

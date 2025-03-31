@@ -1,0 +1,31 @@
+name: HDR10 (Missing)
+description: ''
+tags:
+- HDR
+conditions:
+- name: 2160p
+  negate: false
+  required: true
+  resolution: 2160p
+  type: resolution
+- name: BLURAY
+  negate: false
+  required: true
+  source: bluray
+  type: source
+- name: HDR10
+  type: release_title
+  required: true
+  negate: true
+  pattern: HDR10
+- name: HDR10+
+  type: release_title
+  required: true
+  negate: true
+  pattern: HDR10+
+- name: SDR
+  type: release_title
+  required: true
+  negate: true
+  pattern: SDR
+tests: []

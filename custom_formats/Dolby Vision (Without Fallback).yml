@@ -1,0 +1,11 @@
+name: Dolby Vision (Without Fallback)
+description: ''
+tags:
+- HDR
+conditions:
+- name: Dolby Vision (Without Fallback)
+  negate: false
+  pattern: Dolby Vision (Without Fallback)
+  required: true
+  type: release_title
+tests: []

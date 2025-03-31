@@ -1,0 +1,11 @@
+name: 3D
+description: ''
+tags:
+- Unwanted
+conditions:
+- name: 3D
+  type: release_title
+  required: true
+  negate: false
+  pattern: 3D
+tests: []
