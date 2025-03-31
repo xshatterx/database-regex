@@ -1,4 +1,4 @@
-name: PMPT
+name: PMTP
 description: ''
 tags:
 - Streaming Service
@@ -9,7 +9,7 @@ conditions:
   required: true
   source: web_dl
   type: source
-- name: PTMP
+- name: PMTP
   negate: false
   pattern: Paramount+
   required: true
