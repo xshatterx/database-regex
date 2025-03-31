@@ -1,0 +1,22 @@
+name: STAN
+description: ''
+tags:
+- Streaming Service
+- WEBDL
+conditions:
+- name: WEBDL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: STAN
+  negate: false
+  pattern: Stan
+  required: false
+  type: release_title
+- name: STAN Rename
+  type: release_title
+  required: false
+  negate: false
+  pattern: Stan Rename
+tests: []

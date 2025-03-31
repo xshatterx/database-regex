@@ -83,6 +83,8 @@ custom_formats:
   score: 60
 - name: PMTP
   score: 60
+- name: STAN
+  score: 60
 - name: Repack3
   score: 8
 - name: Repack2
