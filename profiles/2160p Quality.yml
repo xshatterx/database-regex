@@ -31,8 +31,6 @@ custom_formats:
   score: 63000
 - name: 2160p Balanced  Tier 2
   score: 62000
-- name: 2160p WEBDL
-  score: 60000
 - name: 1080p Quality Tier 1
   score: 44000
 - name: 1080p Quality Tier 2
@@ -47,8 +45,6 @@ custom_formats:
   score: 33000
 - name: 1080p Balanced Tier 2
   score: 32000
-- name: 1080p WEBDL
-  score: 30000
 - name: MA
   score: 5000
 - name: AMZN

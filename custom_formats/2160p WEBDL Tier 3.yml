@@ -1,0 +1,88 @@
+name: 2160p WEBDL Tier 3
+description: ''
+tags:
+- Release Group Tier
+- 2160p
+- WEBDL
+conditions:
+- name: 2160p
+  negate: false
+  required: true
+  resolution: 2160p
+  type: resolution
+- name: WEBDL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: BLUTONiUM
+  negate: false
+  pattern: BLUTONiUM
+  required: false
+  type: release_group
+- name: ABBIE
+  negate: false
+  pattern: ABBIE
+  required: false
+  type: release_group
+- name: AJP69
+  negate: false
+  pattern: AJP69
+  required: false
+  type: release_group
+- name: APEX
+  negate: false
+  pattern: APEX
+  required: false
+  type: release_group
+- name: CRFW
+  negate: false
+  pattern: CRFW
+  required: false
+  type: release_group
+- name: NOSiViD
+  negate: false
+  pattern: NOSiViD
+  required: false
+  type: release_group
+- name: NTG
+  negate: false
+  pattern: NTG
+  required: false
+  type: release_group
+- name: SiC
+  negate: false
+  pattern: SiC
+  required: false
+  type: release_group
+- name: dB
+  negate: false
+  pattern: dB
+  required: false
+  type: release_group
+- name: monkee
+  negate: false
+  pattern: monkee
+  required: false
+  type: release_group
+- name: SbR
+  negate: false
+  pattern: SbR
+  required: false
+  type: release_group
+- name: SMURF
+  negate: false
+  pattern: SMURF
+  required: false
+  type: release_group
+- name: XEBEC
+  negate: false
+  pattern: XEBEC
+  required: false
+  type: release_group
+- name: playWEB
+  type: release_group
+  required: false
+  negate: false
+  pattern: playWEB
+tests: []

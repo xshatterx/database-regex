@@ -1,0 +1,48 @@
+name: 2160p WEBDL Tier 2
+description: ''
+tags:
+- Release Group Tier
+- 2160p
+- WEBDL
+conditions:
+- name: 2160p
+  negate: false
+  required: true
+  resolution: 2160p
+  type: resolution
+- name: WEBDL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: HHWEB
+  negate: false
+  pattern: HHWEB
+  required: false
+  type: release_group
+- name: HONE
+  negate: false
+  pattern: HONE
+  required: false
+  type: release_group
+- name: Kitsune
+  negate: false
+  pattern: Kitsune
+  required: false
+  type: release_group
+- name: CMRG
+  negate: false
+  pattern: CMRG
+  required: false
+  type: release_group
+- name: NTb
+  negate: false
+  pattern: NTb
+  required: false
+  type: release_group
+- name: TEPES
+  negate: false
+  pattern: TEPES
+  required: false
+  type: release_group
+tests: []

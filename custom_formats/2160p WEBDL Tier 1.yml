@@ -1,7 +1,9 @@
-name: 2160p WEBDL
+name: 2160p WEBDL Tier 1
 description: ''
 tags:
-- Resolution
+- Release Group Tier
+- 2160p
+- WEBDL
 conditions:
 - name: 2160p
   negate: false
@@ -13,4 +15,9 @@ conditions:
   required: true
   source: web_dl
   type: source
+- name: FLUX
+  negate: false
+  pattern: FLUX
+  required: false
+  type: release_group
 tests: []
