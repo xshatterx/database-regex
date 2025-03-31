@@ -1,14 +1,14 @@
-name: 2160p WEBDL Tier 3
+name: 1080p WEBDL Tier 3
 description: ''
 tags:
 - Release Group Tier
-- 2160p
+- 1080p
 - WEBDL
 conditions:
-- name: 2160p
+- name: 1080p
   negate: false
   required: true
-  resolution: 2160p
+  resolution: 1080p
   type: resolution
 - name: WEBDL
   negate: false

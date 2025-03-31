@@ -1,0 +1,23 @@
+name: 1080p WEBDL Tier 1
+description: ''
+tags:
+- Release Group Tier
+- 1080p
+- WEBDL
+conditions:
+- name: 1080p
+  negate: false
+  required: true
+  resolution: 1080p
+  type: resolution
+- name: WEBDL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: FLUX
+  negate: false
+  pattern: FLUX
+  required: false
+  type: release_group
+tests: []
