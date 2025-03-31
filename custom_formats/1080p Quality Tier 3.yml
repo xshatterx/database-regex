@@ -11,11 +11,11 @@ conditions:
   required: true
   resolution: 1080p
   type: resolution
-- name: Not WEB-DL
-  type: source
+- name: BLURAY
+  negate: false
   required: true
-  negate: true
-  source: web_dl
+  source: bluray
+  type: source
 - name: CRiSC
   negate: false
   pattern: CRiSC
