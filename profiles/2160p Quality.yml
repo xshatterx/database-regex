@@ -1,0 +1,66 @@
+name: 2160p Quality
+description: "2160p Quality utilizes the [**Encode Efficiency Index**](https://dictionarry.dev/wiki/EEi)\
+  \ metric at a 55% target ratio to prioritize **transparent** x265 4k encodes. \n\
+  \n- 4 quality tiers prioritize encodes from reputable groups, with fallback to high-quality\
+  \ WEB-DLs and balanced tier groups. 2 additional quality tiers are placed below\
+  \ for further fallback. \n- Special considerations for both **HDR** and **Lossless\
+  \ Audio** formats help to push lower tiered encodes over higher tier ones in cases\
+  \ where better sources are used.\n- If no 2160p release can be found, the profile\
+  \ will fall back to the 1080p Quality Profile. "
+tags:
+- 2160p
+- Quality Focused
+- HDR
+- Lossless Audio
+- x265
+- h265
+upgradesAllowed: true
+minCustomFormatScore: 0
+upgradeUntilScore: 100000
+minScoreIncrement: 1
+custom_formats:
+- name: 2160p Quality Tier 1
+  score: 88000
+- name: 2160p Quality Tier 2
+  score: 86000
+- name: 2160p Quality Tier 3
+  score: 84000
+- name: 2160p Quality Tier 4
+  score: 82000
+- name: Repack3
+  score: 8
+- name: Repack2
+  score: 7
+- name: Repack
+  score: 6
+- name: 3D
+  score: -99999
+- name: AV1
+  score: -99999
+- name: BRDISK
+  score: -99999
+- name: Remux
+  score: -99999
+- name: Remux (Quality Match)
+  score: -99999
+- name: Upscaled
+  score: -99999
+- name: VVC
+  score: -99999
+qualities:
+- id: -1
+  name: Transparent Capable
+  description: ''
+  qualities:
+  - id: 10
+    name: Bluray-1080p
+  - id: 4
+    name: Bluray-2160p
+  - id: 5
+    name: WEBDL-2160p
+  - id: 9
+    name: WEBDL-1080p
+upgrade_until:
+  id: -1
+  name: Transparent Capable
+language: must_english

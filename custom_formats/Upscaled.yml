@@ -2,6 +2,7 @@ name: Upscaled
 description: ''
 tags:
 - Unwanted
+- Enhancements
 conditions:
 - name: Upscaled
   negate: false

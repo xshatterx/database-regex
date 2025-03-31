@@ -2,6 +2,7 @@ name: Repack
 description: ''
 tags:
 - Repack
+- Indexer Flags
 conditions:
 - name: Repack
   negate: false

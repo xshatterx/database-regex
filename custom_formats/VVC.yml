@@ -1,0 +1,11 @@
+name: VVC
+description: ''
+tags:
+- Codecs
+conditions:
+- name: VVC
+  type: release_title
+  required: true
+  negate: false
+  pattern: VVC
+tests: []
