@@ -15,7 +15,7 @@ tags:
 - x265
 - h265
 upgradesAllowed: true
-minCustomFormatScore: 0
+minCustomFormatScore: 20000
 upgradeUntilScore: 100000
 minScoreIncrement: 1
 custom_formats:
@@ -27,6 +27,58 @@ custom_formats:
   score: 84000
 - name: 2160p Quality Tier 4
   score: 82000
+- name: 2160p Balanced  Tier 1
+  score: 64000
+- name: 2160p Balanced  Tier 2
+  score: 62000
+- name: 2160p WEBDL
+  score: 60000
+- name: 1080p Quality Tier 1
+  score: 48000
+- name: 1080p Quality Tier 2
+  score: 46000
+- name: 1080p Quality Tier 3
+  score: 44000
+- name: 1080p Quality Tier 4
+  score: 42000
+- name: 1080p Quality Tier 5
+  score: 40000
+- name: 1080p Balanced Tier 1
+  score: 34000
+- name: 1080p Balanced Tier 2
+  score: 32000
+- name: 1080p WEBDL
+  score: 30000
+- name: MA
+  score: 8000
+- name: AMZN
+  score: 6000
+- name: Dolby Vision
+  score: 6000
+- name: DSNP
+  score: 6000
+- name: HMAX
+  score: 6000
+- name: ATVP
+  score: 4000
+- name: HDR10+
+  score: 4000
+- name: MAX
+  score: 4000
+- name: NF
+  score: 4000
+- name: PCOK
+  score: 4000
+- name: PMTP
+  score: 4000
+- name: HDR10
+  score: 2000
+- name: HDR10 (Missing)
+  score: 2000
+- name: HULU
+  score: 2000
+- name: iT
+  score: 2000
 - name: Repack3
   score: 8
 - name: Repack2
@@ -38,6 +90,8 @@ custom_formats:
 - name: AV1
   score: -99999
 - name: BRDISK
+  score: -99999
+- name: Dolby Vision (Without Fallback)
   score: -99999
 - name: Remux
   score: -99999
