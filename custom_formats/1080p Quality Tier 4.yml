@@ -1,5 +1,5 @@
-name: 1080p Quality Tier 3
-description: Matches release groups who fall under 1080p GPPi Tier 2
+name: 1080p Quality Tier 4
+description: Matches release groups who fall under 1080p GPPi Tier 4
 tags:
 - GPPi
 - Release Group Tier
@@ -12,48 +12,43 @@ conditions:
   resolution: 1080p
   type: resolution
 - name: Not WEB-DL
-  type: source
-  required: true
   negate: true
+  required: true
   source: web_dl
-- name: CRiSC
+  type: source
+- name: BMF
   negate: false
-  pattern: CRiSC
+  pattern: BMF
   required: false
   type: release_group
-- name: decibeL
+- name: de[42]
   negate: false
-  pattern: decibeL
+  pattern: de[42]
   required: false
   type: release_group
-- name: FoRM
+- name: HDMaNiAcS
   negate: false
-  pattern: FoRM
+  pattern: HDMaNiAcS
   required: false
   type: release_group
-- name: HiDt
+- name: IDE
   negate: false
-  pattern: HiDt
+  pattern: IDE
   required: false
   type: release_group
-- name: HiP
+- name: LolHD
   negate: false
-  pattern: HiP
+  pattern: LolHD
   required: false
   type: release_group
-- name: iFT
+- name: NCmt
   negate: false
-  pattern: iFT
+  pattern: NCmt
   required: false
   type: release_group
-- name: SA89
+- name: NTb
   negate: false
-  pattern: SA89
-  required: false
-  type: release_group
-- name: WMING
-  negate: false
-  pattern: WMING
+  pattern: NTb
   required: false
   type: release_group
 tests: []
