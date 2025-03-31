@@ -1,0 +1,26 @@
+name: 720p Quality Tier 4
+description: Matches release groups who fall under 720p Quality Tier 4
+tags:
+- Release Group
+conditions:
+- name: Not WEB-DL
+  negate: true
+  required: true
+  source: web_dl
+  type: source
+- name: 720p
+  negate: false
+  required: true
+  resolution: 720p
+  type: resolution
+- name: EA
+  negate: false
+  pattern: EA
+  required: false
+  type: release_group
+- name: TDD
+  negate: false
+  pattern: TDD
+  required: false
+  type: release_group
+tests: []
