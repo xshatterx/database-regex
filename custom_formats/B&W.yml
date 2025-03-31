@@ -1,0 +1,17 @@
+name: B&W
+description: ''
+tags:
+- Unwanted
+- Enhancements
+conditions:
+- name: B&W
+  negate: false
+  pattern: B&W
+  required: true
+  type: release_title
+- name: Colour
+  type: release_title
+  required: true
+  negate: true
+  pattern: Colour
+tests: []
