@@ -11,15 +11,10 @@ conditions:
   required: true
   resolution: 1080p
   type: resolution
-- name: Not WEB-DL
-  negate: true
+- name: BLURAY
+  negate: false
   required: true
-  source: web_dl
-  type: source
-- name: Not DVD
-  negate: true
-  required: true
-  source: dvd
+  source: bluray
   type: source
 - name: AJP69
   negate: false

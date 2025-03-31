@@ -1,0 +1,28 @@
+name: 2160p Balanced  Tier 2
+description: ''
+tags:
+- Release Group Tier
+- 2160p
+- Balanced
+conditions:
+- name: 2160p
+  negate: false
+  required: true
+  resolution: 2160p
+  type: resolution
+- name: BLURAY
+  negate: false
+  required: true
+  source: bluray
+  type: source
+- name: BHDStudio
+  negate: false
+  pattern: BHDStudio
+  required: false
+  type: release_group
+- name: hallowed
+  type: release_group
+  required: false
+  negate: false
+  pattern: hallowed
+tests: []

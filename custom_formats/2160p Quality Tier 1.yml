@@ -1,0 +1,23 @@
+name: 2160p Quality Tier 1
+description: ''
+tags:
+- Release Group Tier
+- 2160p
+- Quality
+conditions:
+- name: 2160p
+  type: resolution
+  required: true
+  negate: false
+  resolution: 2160p
+- name: BLURAY
+  type: source
+  required: true
+  negate: false
+  source: bluray
+- name: DON
+  type: release_group
+  required: false
+  negate: false
+  pattern: DON
+tests: []

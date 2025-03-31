@@ -1,11 +1,10 @@
-name: BRDISK
+name: Remux (Quality Match)
 description: ''
-tags:
-- Storage
+tags: []
 conditions:
-- name: BRDISK
+- name: Remux (Quality Match)
   negate: false
-  qualityModifier: brdisk
+  qualityModifier: remux
   required: true
   type: quality_modifier
 tests: []

@@ -1,10 +1,11 @@
 name: Remux
 description: ''
-tags: []
+tags:
+- Source
 conditions:
 - name: Remux
-  type: quality_modifier
-  required: true
   negate: false
-  qualityModifier: remux
+  pattern: Remux
+  required: true
+  type: release_title
 tests: []
