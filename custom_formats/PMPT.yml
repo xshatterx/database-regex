@@ -1,0 +1,17 @@
+name: PMPT
+description: ''
+tags:
+- Streaming Service
+- WEBDL
+conditions:
+- name: WEBDL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: PTMP
+  negate: false
+  pattern: Paramount+
+  required: true
+  type: release_title
+tests: []

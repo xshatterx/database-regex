@@ -1,0 +1,17 @@
+name: AMZN
+description: ''
+tags:
+- Streaming Service
+- WEBDL
+conditions:
+- name: WEBDL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: AMZN
+  negate: false
+  pattern: Amazon Prime
+  required: true
+  type: release_title
+tests: []

@@ -1,0 +1,17 @@
+name: MA
+description: ''
+tags:
+- Streaming Service
+- WEBDL
+conditions:
+- name: WEBDL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: MA
+  negate: false
+  pattern: Movies Anywhere
+  required: true
+  type: release_title
+tests: []

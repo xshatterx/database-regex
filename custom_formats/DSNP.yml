@@ -1,0 +1,17 @@
+name: DSNP
+description: ''
+tags:
+- Streaming Service
+- WEBDL
+conditions:
+- name: WEBDL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: DSNP
+  negate: false
+  pattern: Disney+
+  required: true
+  type: release_title
+tests: []

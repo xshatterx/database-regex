@@ -1,0 +1,17 @@
+name: HULU
+description: ''
+tags:
+- Streaming Service
+- WEBDL
+conditions:
+- name: WEBDL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: HULU
+  negate: false
+  pattern: Hulu
+  required: true
+  type: release_title
+tests: []

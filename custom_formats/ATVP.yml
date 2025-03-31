@@ -1,0 +1,17 @@
+name: ATVP
+description: ''
+tags:
+- Streaming Service
+- WEBDL
+conditions:
+- name: WEBDL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: ATVP
+  negate: false
+  pattern: Apple TV+
+  required: true
+  type: release_title
+tests: []
