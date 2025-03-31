@@ -15,57 +15,43 @@ minCustomFormatScore: 2000
 upgradeUntilScore: 100000
 minScoreIncrement: 1
 custom_formats:
-- name: 2160p Quality Tier 1
-  score: 52000
-- name: 2160p Quality Tier 2
-  score: 50000
-- name: 2160p Quality Tier 3
-  score: 48000
-- name: 2160p Quality Tier 4
-  score: 46000
-- name: 2160p WEBDL Tier 1
-  score: 44000
-- name: 2160p WEBDL Tier 2
-  score: 42000
-- name: 2160p Balanced  Tier 1
-  score: 40000
-- name: 2160p WEBDL Tier 3
-  score: 38000
-- name: 2160p Balanced  Tier 2
-  score: 36000
 - name: 1080p Quality Tier 1
-  score: 34000
+  score: 38000
 - name: 1080p Quality Tier 2
-  score: 32000
+  score: 36000
 - name: 1080p Quality Tier 3
-  score: 30000
+  score: 34000
 - name: 1080p Quality Tier 4
-  score: 28000
+  score: 32000
 - name: 1080p Quality Tier 5
-  score: 26000
+  score: 30000
 - name: 1080p WEBDL Tier 1
-  score: 24000
+  score: 28000
 - name: 1080p WEBDL Tier 2
-  score: 22000
+  score: 26000
 - name: 1080p WEBDL Tier 3
-  score: 20000
+  score: 24000
 - name: 1080p Balanced Tier 1
-  score: 18000
+  score: 22000
 - name: 1080p Balanced Tier 2
-  score: 16000
+  score: 20000
 - name: 720p Quality Tier 1
-  score: 14000
+  score: 18000
 - name: 720p Quality Tier 2
-  score: 12000
+  score: 16000
 - name: 720p Quality Tier 3
-  score: 10000
+  score: 14000
 - name: 720p Quality Tier 4
-  score: 8000
+  score: 12000
 - name: 720p Quality Tier 5
-  score: 6000
+  score: 10000
 - name: 720p Quality Tier 6
-  score: 4000
+  score: 8000
 - name: 720p Quality Tier 7
+  score: 6000
+- name: SD Quality Tier 1
+  score: 4000
+- name: SD Quality Tier 2
   score: 2000
 - name: Dolby Vision
   score: 800
