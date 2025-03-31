@@ -1,0 +1,11 @@
+name: Repack2
+description: ''
+tags:
+- Repack
+conditions:
+- name: Repack2
+  negate: false
+  pattern: Repack2
+  required: true
+  type: release_title
+tests: []
