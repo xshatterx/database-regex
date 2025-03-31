@@ -1,0 +1,23 @@
+name: 1080p HEVC Tier 2
+description: ''
+tags:
+- Release Group Tier
+- 1080p
+- HEVC
+conditions:
+- name: 1080p
+  negate: false
+  required: true
+  resolution: 1080p
+  type: resolution
+- name: BLURAY
+  negate: false
+  required: true
+  source: bluray
+  type: source
+- name: TAoE
+  negate: false
+  pattern: TAoE
+  required: false
+  type: release_group
+tests: []

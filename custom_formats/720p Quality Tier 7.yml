@@ -65,4 +65,9 @@ conditions:
   pattern: MTeam
   required: false
   type: release_group
+- name: playHD
+  type: release_group
+  required: false
+  negate: false
+  pattern: playHD
 tests: []

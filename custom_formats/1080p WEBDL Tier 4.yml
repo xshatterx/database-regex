@@ -1,0 +1,38 @@
+name: 1080p WEBDL Tier 4
+description: ''
+tags:
+- Release Group Tier
+- 1080p
+- WEBDL
+conditions:
+- name: 1080p
+  negate: false
+  required: true
+  resolution: 1080p
+  type: resolution
+- name: WEBDL
+  negate: false
+  required: true
+  source: web_dl
+  type: source
+- name: alfaHD
+  negate: false
+  pattern: alfaHD
+  required: false
+  type: release_group
+- name: BYNDR
+  type: release_group
+  required: false
+  negate: false
+  pattern: BYNDR
+- name: SiGLA
+  negate: false
+  pattern: SiGLA
+  required: false
+  type: release_group
+- name: SiGMA
+  negate: false
+  pattern: SiGMA
+  required: false
+  type: release_group
+tests: []
