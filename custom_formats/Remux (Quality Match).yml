@@ -1,6 +1,7 @@
 name: Remux (Quality Match)
 description: ''
-tags: []
+tags:
+- Source
 conditions:
 - name: Remux (Quality Match)
   negate: false
