@@ -15,16 +15,21 @@ conditions:
   required: true
   source: web_dl
   type: source
+- name: ABM
+  type: release_group
+  required: false
+  negate: false
+  pattern: ABM
 - name: alfaHD
   negate: false
   pattern: alfaHD
   required: false
   type: release_group
 - name: BYNDR
-  type: release_group
-  required: false
   negate: false
   pattern: BYNDR
+  required: false
+  type: release_group
 - name: SiGLA
   negate: false
   pattern: SiGLA

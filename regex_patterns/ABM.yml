@@ -1,0 +1,6 @@
+name: ABM
+pattern: (?<=^|[\s.-])ABM\b
+description: Matches "4KDVS" when preceded by whitespace, a hyphen or dot
+tags:
+- Release Group
+tests: []
