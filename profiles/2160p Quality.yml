@@ -15,104 +15,86 @@ tags:
 - x265
 - h265
 upgradesAllowed: true
-minCustomFormatScore: 2000
+minCustomFormatScore: 10000
 upgradeUntilScore: 100000
 minScoreIncrement: 1
 custom_formats:
 - name: 2160p Quality Tier 1
-  score: 62000
+  score: 92000
 - name: 2160p Quality Tier 2
-  score: 60000
+  score: 86000
 - name: 2160p Quality Tier 3
-  score: 58000
-- name: 2160p Quality Tier 4
-  score: 56000
-- name: 2160p WEBDL Tier 1
-  score: 54000
-- name: 2160p WEBDL Tier 2
-  score: 52000
+  score: 80000
+- name: 2160p WEBDL
+  score: 60000
 - name: 2160p Balanced  Tier 1
-  score: 50000
-- name: 2160p WEBDL Tier 3
-  score: 48000
+  score: 25000
 - name: 2160p Balanced  Tier 2
-  score: 46000
+  score: 23000
 - name: 1080p Quality Tier 1
-  score: 44000
-- name: 1080p Quality Tier 2
-  score: 42000
-- name: 1080p Quality Tier 3
-  score: 40000
-- name: 1080p Quality Tier 4
-  score: 38000
-- name: 1080p Quality Tier 5
-  score: 36000
-- name: 1080p WEBDL Tier 1
-  score: 34000
-- name: 1080p WEBDL Tier 2
-  score: 32000
-- name: 1080p WEBDL Tier 3
-  score: 30000
-- name: 1080p WEBDL Tier 4
-  score: 28000
-- name: 1080p Balanced Tier 1
-  score: 26000
-- name: 1080p Balanced Tier 2
-  score: 24000
-- name: 1080p HEVC Tier 1
   score: 22000
-- name: 1080p HEVC Tier 2
+- name: 1080p Quality Tier 2
+  score: 21000
+- name: 1080p Quality Tier 3
   score: 20000
-- name: 720p Quality Tier 1
+- name: 1080p Quality Tier 4
+  score: 19000
+- name: 1080p Quality Tier 5
   score: 18000
-- name: 720p Quality Tier 2
+- name: 1080p WEBDL Tier 1
+  score: 17000
+- name: 1080p WEBDL Tier 2
   score: 16000
-- name: 720p Quality Tier 3
+- name: 1080p WEBDL Tier 3
+  score: 15000
+- name: 1080p WEBDL Tier 4
   score: 14000
-- name: 720p Quality Tier 4
+- name: 1080p Balanced Tier 1
+  score: 13000
+- name: 1080p Balanced Tier 2
   score: 12000
-- name: 720p Quality Tier 5
+- name: 1080p HEVC Tier 1
+  score: 11000
+- name: 1080p HEVC Tier 2
   score: 10000
-- name: 720p Quality Tier 6
-  score: 8000
-- name: 720p Quality Tier 7
-  score: 6000
-- name: SD Quality Tier 1
-  score: 4000
-- name: SD Quality Tier 2
-  score: 2000
-- name: Dolby Vision
-  score: 800
-- name: HDR10+
-  score: 600
-- name: HDR10
-  score: 400
-- name: HDR10 (Missing)
-  score: 200
 - name: MA
-  score: 100
-- name: ATVP
-  score: 80
-- name: DSNP
-  score: 80
-- name: HMAX
-  score: 80
-- name: iT
-  score: 80
-- name: NF
-  score: 80
+  score: 4000
 - name: AMZN
-  score: 60
-- name: HULU
-  score: 60
+  score: 3000
+- name: ATVP
+  score: 3000
+- name: Dolby Vision
+  score: 3000
+- name: DSNP
+  score: 3000
+- name: HMAX
+  score: 3000
+- name: iT
+  score: 3000
 - name: MAX
-  score: 60
+  score: 3000
+- name: NF
+  score: 3000
+- name: HDR10+
+  score: 2000
+- name: HULU
+  score: 2000
 - name: PCOK
-  score: 60
+  score: 2000
 - name: PMTP
-  score: 60
+  score: 2000
 - name: STAN
-  score: 60
+  score: 2000
+- name: HDR10
+  score: 1000
+- name: HDR10 (Missing)
+  score: 1000
+- name: 2160p WEBDL Tier 1
+  score: 800
+- name: 2160p WEBDL Tier 2
+  score: 700
+- name: 2160p WEBDL Tier 3
+  score: 600
 - name: Repack3
   score: 8
 - name: Repack2

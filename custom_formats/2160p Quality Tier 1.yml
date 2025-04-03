@@ -6,18 +6,23 @@ tags:
 - Quality
 conditions:
 - name: 2160p
-  type: resolution
-  required: true
   negate: false
+  required: true
   resolution: 2160p
+  type: resolution
 - name: BLURAY
-  type: source
-  required: true
   negate: false
+  required: true
   source: bluray
-- name: DON
+  type: source
+- name: CtrlHD
   type: release_group
   required: false
   negate: false
+  pattern: CtrlHD
+- name: DON
+  negate: false
   pattern: DON
+  required: false
+  type: release_group
 tests: []

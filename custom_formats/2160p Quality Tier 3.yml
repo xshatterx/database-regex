@@ -15,24 +15,9 @@ conditions:
   required: true
   source: bluray
   type: source
-- name: HQMUX
+- name: MainFrame
   negate: false
-  pattern: HQMUX
-  required: false
-  type: release_group
-- name: PTer
-  negate: false
-  pattern: PTer
-  required: false
-  type: release_group
-- name: c0ke
-  negate: false
-  pattern: c0kE
-  required: false
-  type: release_group
-- name: D-ZON3
-  negate: false
-  pattern: D-Z0N3
+  pattern: MainFrame
   required: false
   type: release_group
 tests: []
