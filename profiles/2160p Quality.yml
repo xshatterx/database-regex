@@ -25,6 +25,10 @@ custom_formats:
   score: 86000
 - name: 2160p Quality Tier 3
   score: 80000
+- name: 2160p Balanced  Tier 1
+  score: 62000
+- name: 2160p Balanced  Tier 2
+  score: 60000
 - name: 2160p WEBDL
   score: 60000
 - name: 1080p Quality Tier 1
@@ -37,10 +41,6 @@ custom_formats:
   score: 42000
 - name: 1080p Quality Tier 5
   score: 40000
-- name: 2160p Balanced  Tier 1
-  score: 25000
-- name: 2160p Balanced  Tier 2
-  score: 23000
 - name: 1080p WEBDL Tier 1
   score: 17000
 - name: 1080p WEBDL Tier 2
