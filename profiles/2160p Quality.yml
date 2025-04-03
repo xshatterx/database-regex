@@ -51,37 +51,37 @@ custom_formats:
   score: 22000
 - name: 1080p HEVC Tier 2
   score: 20000
-- name: MA
-  score: 4000
-- name: AMZN
-  score: 3000
-- name: ATVP
-  score: 3000
 - name: Dolby Vision
   score: 3000
+- name: MA
+  score: 3000
+- name: AMZN
+  score: 2000
+- name: ATVP
+  score: 2000
 - name: DSNP
-  score: 3000
-- name: HMAX
-  score: 3000
-- name: iT
-  score: 3000
-- name: MAX
-  score: 3000
-- name: NF
-  score: 3000
+  score: 2000
 - name: HDR10+
   score: 2000
-- name: HULU
+- name: HMAX
   score: 2000
-- name: PCOK
+- name: iT
   score: 2000
-- name: PMTP
+- name: MAX
   score: 2000
-- name: STAN
+- name: NF
   score: 2000
 - name: HDR10
   score: 1000
 - name: HDR10 (Missing)
+  score: 1000
+- name: HULU
+  score: 1000
+- name: PCOK
+  score: 1000
+- name: PMTP
+  score: 1000
+- name: STAN
   score: 1000
 - name: 2160p WEBDL Tier 1
   score: 800
