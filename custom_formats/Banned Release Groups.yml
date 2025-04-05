@@ -1,0 +1,12 @@
+name: Banned Release Groups
+description: ''
+tags:
+- Unwanted
+- Enhancements
+conditions:
+- name: Weasley
+  type: release_group
+  required: false
+  negate: false
+  pattern: Weasley
+tests: []

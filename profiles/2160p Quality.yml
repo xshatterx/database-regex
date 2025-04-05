@@ -109,6 +109,8 @@ custom_formats:
   score: -99999
 - name: B&W
   score: -99999
+- name: Banned Release Groups
+  score: -99999
 - name: BRDISK
   score: -99999
 - name: Dolby Vision (Without Fallback)
