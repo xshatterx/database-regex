@@ -13,19 +13,24 @@ conditions:
   required: true
   source: bluray
   type: source
-- name: HDR10
-  type: release_title
-  required: true
-  negate: true
-  pattern: HDR10
-- name: HDR10+
-  type: release_title
-  required: true
-  negate: true
-  pattern: HDR10+
-- name: SDR
-  type: release_title
-  required: true
+- name: Not SDR
   negate: true
   pattern: SDR
+  required: true
+  type: release_title
+- name: Not HDR
+  type: release_title
+  required: true
+  negate: true
+  pattern: HDR
+- name: Not HDR10
+  negate: true
+  pattern: HDR10
+  required: true
+  type: release_title
+- name: Not HDR10+
+  negate: true
+  pattern: HDR10+
+  required: true
+  type: release_title
 tests: []
