@@ -44,12 +44,14 @@ custom_formats:
 - name: 1080p WEBDL
   score: 30000
 - name: 1080p Balanced Tier 1
-  score: 26000
+  score: 28000
 - name: 1080p Balanced Tier 2
-  score: 24000
+  score: 26000
 - name: 1080p HEVC Tier 1
-  score: 22000
+  score: 24000
 - name: 1080p HEVC Tier 2
+  score: 22000
+- name: 1080p HEVC Tier 3
   score: 20000
 - name: Dolby Vision
   score: 3000

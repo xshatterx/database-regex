@@ -15,9 +15,9 @@ conditions:
   required: true
   source: bluray
   type: source
-- name: TAoE
+- name: QxR
   negate: false
-  pattern: TAoE
+  pattern: QxR
   required: false
   type: release_group
 tests: []

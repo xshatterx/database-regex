@@ -1,4 +1,4 @@
-name: 1080p HEVC Tier 1
+name: 1080p HEVC Tier 3
 description: ''
 tags:
 - Release Group Tier
@@ -15,9 +15,9 @@ conditions:
   required: true
   source: bluray
   type: source
-- name: HONE
+- name: TAoE
   negate: false
-  pattern: HONE
+  pattern: TAoE
   required: false
   type: release_group
 tests: []
