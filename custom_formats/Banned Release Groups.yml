@@ -5,7 +5,7 @@ tags:
 - Enhancements
 conditions:
 - name: Weasley
-  type: release_group
+  type: release_title
   required: false
   negate: false
   pattern: Weasley

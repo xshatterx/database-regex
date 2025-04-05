@@ -1,5 +1,5 @@
 name: Weasley
-pattern: (?<=^|[\s.-])Weasley\b
+pattern: \b(Weasley)\b
 description: ''
 tags:
 - Release Group
